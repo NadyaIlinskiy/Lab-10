@@ -1,7 +1,12 @@
 'use strict';
 
+const server = require('../lib/server.js').server;
 const supertester = require('./supertester.js');
 const Users = require('../lib/models/users-model.js');
+const mockRequest = supertester.server(server);
+
+const jwt = require('jsonwebtoken');
+
 
 // === Mock Database Setup ============================================
 
@@ -36,8 +41,12 @@ afterAll(supertester.stopDB);
 
 // === Your Test Code =================================================
 
-/* describe('test', () => {
-  it('does something', () => {
-    
+describe('Authenticating a user', () => {
+  it('attempts to sign in as bill', async () => {
+    let res = await mockRequest
+      .post('/signin')
+      .send({ username: 'sarah', password: 'sarahpassword'});
+
+    expect(res).toBeDefined();
   }); 
-}); */
+}); 

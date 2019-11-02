@@ -11,11 +11,11 @@
 - [heroku](https://lab-10-auth.herokuapp.com/)
 
 #### Lab Quesions
-- Currently, the client is just sending us an object containing the username and password to us, which is why we can just pass along (req.body). What is a better way to do this?
-The client should encrypt the password using basic auth
+<!-- Currently, the client is just sending us an object containing the username and password to us, which is why we can just pass along (req.body). What is a better way to do this? -->
+- The client should encrypt the password using basic auth
 
-- What are the pros and cons of setting res.cookie?
-The use of cookies places trust on the client side. Not all browsers support cookies and users have the option to enable or disable cookies. They do not require server resources. Cookies can persist for long periods of time (days, months, years). Easily manageable. 
+ <!-- What are the pros and cons of setting res.cookie? -->
+- The use of cookies places trust on the client side. Not all browsers support cookies and users have the option to enable or disable cookies. They do not require server resources. Cookies can persist for long periods of time (days, months, years). Easily manageable. 
 
 #### Setup
  `.env` requirements
@@ -35,4 +35,4 @@ The use of cookies places trust on the client side. Not all browsers support coo
 
 #### UML
 
-![UML Diagram]()
+![UML Diagram](assets/Lab10-UML.jpg)
