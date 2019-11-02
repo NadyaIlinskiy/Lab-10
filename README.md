@@ -12,10 +12,14 @@
 
 #### Lab Quesions
 - Currently, the client is just sending us an object containing the username and password to us, which is why we can just pass along (req.body). What is a better way to do this? 
-⋅⋅- The client should encrypt the password using basic auth
+   - The client should encrypt the password using basic auth.
 
 - What are the pros and cons of setting res.cookie?
-⋅⋅- The use of cookies places trust on the client side. Not all browsers support cookies and users have the option to enable or disable cookies. They do not require server resources. Cookies can persist for long periods of time (days, months, years). Easily manageable. 
+   - The use of cookies places trust on the client side. Not all browsers support cookies and users have the option to enable or disable cookies. They do not require server resources. Cookies can persist for long periods of time (days, months, years). Easily manageable. 
+
+- What does .isModified do and why do we use it?
+   - Checks to see if the password has been modified
+   - Security check; see if password was tampered with.
 
 #### Setup
  `.env` requirements
